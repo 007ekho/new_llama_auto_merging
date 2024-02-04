@@ -1,0 +1,7 @@
+openai
+pandas
+llama-index
+streamlit
+transformers
+torch
+
