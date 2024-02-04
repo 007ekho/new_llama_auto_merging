@@ -112,10 +112,10 @@ if "messages" not in st.session_state.keys(): # Initialize the chat messages his
 def load_data():
     try:
         with st.spinner(text="Loading and indexing the Streamlit docs – hang tight! This should take 1-2 minutes."):
-            # documents = SimpleDirectoryReader(input_files=["./eBook-How-to-Build-a-Career-in-AI.pdf"]).load_data()
+            documents = SimpleDirectoryReader(input_files=["./eBook-How-to-Build-a-Career-in-AI.pdf"]).load_data()
             # documents =SimpleDirectoryReader(input_dir="./Data", recursive=True).load_data()
-            reader = SimpleDirectoryReader(input_dir="./Data", recursive=True)
-            documents = reader.load_data()
+            # reader = SimpleDirectoryReader(input_dir="./Data", recursive=True)
+            # documents = reader.load_data()
             
             
             llm = OpenAI(model="gpt-3.5-turbo", temperature=0, system_prompt="Keep your answers technical and based on facts – do not hallucinate features.", api_key=openai.api_key)
