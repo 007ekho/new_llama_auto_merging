@@ -95,12 +95,12 @@ def get_automerging_query_engine(
 
 
 
-st.set_page_config(page_title="Chat with the Streamlit docs, powered by LlamaIndex", page_icon="🦙", layout="centered", initial_sidebar_state="auto", menu_items=None)
+st.set_page_config(page_title="Chat with the SOP DOCUMENTS, powered by LlamaIndex_aUTOMERGER", page_icon="🦙", layout="centered", initial_sidebar_state="auto", menu_items=None)
 # openai.api_key = st.secrets.openai_key
 
-llm = OpenAI(model="gpt-3.5-turbo", temperature=0.1,system_prompt="Keep your answers technical and based on facts – do not hallucinate features.",api_key=openai.api_key)
+llm = OpenAI(model="gpt-3.5-turbo", temperature=0.1,system_prompt="ALL ANSWERS MUST BE BASED ON THE CONTENT OF THE EXISTING DOCUMENT, IF THERE IS NO ANSWER FROM THE DOCUMENT OUTPUT: "PLEASE WITH AN OFFICER".Keep your answers technical and based on facts – do not hallucinate features.",api_key=openai.api_key)
 
-st.title("Chat with the Streamlit docs, powered by LlamaIndex 💬🦙")
+st.title("Chat with the SOP docs, powered by LlamaIndex 💬🦙")
          
 if "messages" not in st.session_state.keys(): # Initialize the chat messages history
     st.session_state.messages = [
